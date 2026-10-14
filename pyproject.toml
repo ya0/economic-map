@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "econviz"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["pandas>=2.2", "geopandas>=1.0", "pyogrio", "shapely>=2", "pyproj", "pyarrow", "requests", "openpyxl", "lxml", "pillow"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["pipeline"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["network: downloads real data (opt-in: pytest -m network)", "slow: reads every tile of the highest zoom, ~4 min (opt-in: pytest -m slow)"]
+addopts = "-m 'not network and not slow' -q"

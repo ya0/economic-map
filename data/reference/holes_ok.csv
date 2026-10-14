@@ -1,0 +1,50 @@
+kind,unit,lon,lat,reason
+uncovered,ATA,,,Antarctica: no national totals
+uncovered,FLK,,,dependency: no national totals (rule 3)
+uncovered,ATF,,,dependency: no national totals (rule 3)
+uncovered,SGS,,,dependency: no national totals (rule 3)
+uncovered,HMD,,,dependency: no national totals (rule 3)
+uncovered,SHN,,,dependency: no national totals (rule 3)
+uncovered,NIU,,,dependency: no national totals (rule 3)
+uncovered,SPM,,,dependency: no national totals (rule 3)
+uncovered,JEY,,,dependency: no national totals (rule 3)
+uncovered,ESB,,,UK base area: no national totals (rule 3)
+uncovered,WSB,,,UK base area: no national totals (rule 3)
+uncovered,SPI,,,Southern Patagonian Ice Field: claimed by nobody's statistics
+uncovered,BRT,,,Bir Tawil: claimed by no state
+ring,ZAF,28.164,-29.615,Lesotho: sovereign enclave
+ring,KGZ,71.098,40.015,Sokh: Uzbek enclave in Kyrgyzstan
+ring,KGZ,70.611,39.829,Vorukh: Tajik enclave in Kyrgyzstan
+ring,MOZ,34.710,-12.059,Likoma: Malawian island inside the coast shape of Mozambique
+ring,ARE,56.293,25.273,Madha: Omani enclave in the UAE
+uncovered,USA,-87.086,43.936,water: Great Lakes and coast are land in Natural Earth admin-0 but not in Census counties
+uncovered,USA,-89.806,47.358,water: Great Lakes and coast are land in Natural Earth admin-0 but not in Census counties
+uncovered,USA,-80.753,42.16,water: Great Lakes and coast are land in Natural Earth admin-0 but not in Census counties
+uncovered,USA,-76.476,43.708,water: Great Lakes and coast are land in Natural Earth admin-0 but not in Census counties
+uncovered,NZL,-176.488,-43.917,outlying island group: no OECD region of its own
+uncovered,POL,21.177,54.373,water: Vistula and Szczecin lagoons
+uncovered,NZL,166.141,-50.69,outlying island group: no OECD region of its own
+uncovered,USA,-82.777,42.527,water: Great Lakes and coast are land in Natural Earth admin-0 but not in Census counties
+uncovered,GRC,24.211,40.282,Mount Athos: no NUTS3 unit
+uncovered,POL,19.387,54.334,water: Vistula and Szczecin lagoons
+uncovered,SRB,19.447,43.336,water: reservoir
+uncovered,NLD,-68.246,12.17,Caribbean Netherlands: no NUTS3 unit
+uncovered,TUR,38.593,36.796,water: reservoir
+uncovered,TUR,37.021,36.728,water: reservoir
+uncovered,PHL,121.995,6.658,coast or lake mismatch
+uncovered,USA,-163.676,69.091,water: Great Lakes and coast are land in Natural Earth admin-0 but not in Census counties
+uncovered,FRA,55.781,-21.106,coast mismatch of an overseas department
+uncovered,SRB,21.23,42.956,water: reservoir
+uncovered,USA,-69.756,46.946,water: Great Lakes and coast are land in Natural Earth admin-0 but not in Census counties
+uncovered,USA,-157.145,71.116,water: Great Lakes and coast are land in Natural Earth admin-0 but not in Census counties
+uncovered,USA,-75.81,36.355,water: Great Lakes and coast are land in Natural Earth admin-0 but not in Census counties
+uncovered,NZL,169.187,-52.534,outlying island group: no OECD region of its own
+uncovered,TUR,40.908,41.184,water: reservoir
+uncovered,USA,-151.097,70.444,water: Great Lakes and coast are land in Natural Earth admin-0 but not in Census counties
+uncovered,USA,-75.801,44.484,water: Great Lakes and coast are land in Natural Earth admin-0 but not in Census counties
+uncovered,AUS,158.892,-54.608,Macquarie Island: no region
+uncovered,SWE,11.75,59.442,water: lake
+uncovered,USA,-150.146,60.92,water: Great Lakes and coast are land in Natural Earth admin-0 but not in Census counties
+uncovered,TUR,44.22,37.15,water: reservoir
+uncovered,ROU,26.313,48.173,water: delta or lake
+uncovered,USA,-158.506,57.164,water: Great Lakes and coast are land in Natural Earth admin-0 but not in Census counties

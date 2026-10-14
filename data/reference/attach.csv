@@ -1,0 +1,7 @@
+unit,target,reason,adds_area
+SOL,SOM,Somaliland: de jure Somalia (UN and WDI totals include it),false
+KAB,KAZ,Baikonur: Russian lease inside Kazakhstan,false
+CYN,CYP,Northern Cyprus: de jure Cyprus (WDI land area includes it),false
+CNM,CYP,UN buffer zone: de jure Cyprus,false
+KAS,IND,Siachen Glacier: held by India,false
+SAH,MAR,Western Sahara: de facto administered by Morocco; shown as part of Morocco (owner decision 2026-10-11),true

@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "ref_year": 2024,
+    "columns": ["gdp_usd", "pop", "area_km2", "gdp_per_km2", "gdp_per_capita", "pop_density", "gdp_year", "pop_year", "area_year", "gdp_source", "pop_source", "area_source", "flags", "level_no", "parent_id", "name", "iso2"],
+    "deflator_us_gdp": { "2000": 70, "2024": 140 },
+    "unallocated_gdp_usd": { "AAA": 50 }
+  },
+  "regions": {
+    "CONT:east": [750, 71, 25, 30, 10.6, 2.84, 2021, 2021, 2020, null, null, null, ["aggregated", "contains_estimate", "contains_wikipedia_secondary"], 0, null, "East", ""],
+    "CONT:west": [200, 25, 101, 1.98, 8, 0.25, 2024, 2024, 2023, "wb_wdi", "wb_wdi", "wb_wdi", ["aggregated"], 0, null, "West", ""],
+    "ISO3:AAA": [650, 21, 15, 43.3, 31, 1.4, 2023, 2024, 2021, "eurostat_nuts3_gdp", "wb_wdi", "eurostat_nuts3_area", ["aggregated"], 1, "CONT:east", "Aland", "DE"],
+    "OECD:AA": [650, 10, 15, 43.3, 60, 2, 2023, 2024, 2021, "eurostat_nuts3_gdp", "eurostat_nuts3_pop", "eurostat_nuts3_area", ["aggregated", "partial_population"], 2, "ISO3:AAA", "Alpha", "DE"],
+    "NUTS2024:AA1": [600, 10, 5, 120, 60, 2, 2023, 2024, 2021, "eurostat_nuts3_gdp", "eurostat_nuts3_pop", "eurostat_nuts3_area", ["gdp_year_offset"], 3, "OECD:AA", "Region A", "DE"],
+    "NUTS2024:AA2": [50, null, 10, 5, null, null, 2023, null, 2021, "eurostat_nuts3_gdp", null, "eurostat_nuts3_area", ["gdp_year_offset"], 3, "OECD:AA", "Region B", "DE"],
+    "ISO3:BBB": [100, 50, 10, 10, 2, 5, 2021, 2021, 2020, "wikipedia:Page", "wb_wdi", "natural_earth", ["aggregated", "contains_estimate", "contains_wikipedia_secondary"], 1, "CONT:east", "Bland", "NG"],
+    "WP:BB-x": [100, 50, 10, 10, 2, 5, 2021, 2021, 2020, "wikipedia:Page", "wikipedia:Page", "natural_earth", ["wikipedia_secondary", "estimate"], 2, "ISO3:BBB", "Alpha Bay", "NG"],
+    "ISO3:CCC": [200, 20, 100, 2, 10, 0.2, 2024, 2024, 2023, "wb_wdi", "wb_wdi", "wb_wdi", ["whole_country", "area_computed"], 1, "CONT:west", "Cland", "BD"],
+    "ISO3:DDD": [null, 5, 1, null, null, 5, null, 2024, 2023, null, "wb_wdi", "wb_wdi", ["whole_country"], 1, "CONT:west", "Dland", "FJ"],
+    "DISPUTED:z": [null, null, null, null, null, null, null, null, null, null, null, null, ["disputed"], 2, "CONT:east", "Zed (disputed)", ""]
+  }
+}

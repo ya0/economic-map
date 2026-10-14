@@ -1,0 +1,7 @@
+iso3,page,name_col,gdp_col,year,cited_origin,flags,year_col
+NGA,List of Nigerian states by GDP,State,GDP (bil. US$),2021,BudgIT state GDP estimates (private think tank; modelled),estimate,
+PAK,List of Pakistani provinces by GDP,Administrative unit,GSP (Billions USD),2021,economist estimates cited on the page (no official provincial accounts),estimate,
+IND,List of Indian states and union territories by GDP,State/Union Territory,2022–23,2022,MoSPI and state directorates GSDP at current prices FY2022-23 (fiscal year mapped to its starting year),fiscal_year,
+ZAF,List of South African provinces by GDP,Province,"GDP (nominal, 2023)[1]",2023,Stats SA provincial GDP 2023,,
+PHL,List of regions of the Philippines by GDP,Region,2024 GDP (million PHP),2024,Philippine Statistics Authority regional accounts 2024 (current prices; page lists 18 regions plus a total row),,
+CHN,List of prefecture-level divisions of China by GDP,Name,GDP (billion CN¥),2022,statistical yearbooks 2022 and 2023 of the provincial statistics bureaus,,Date

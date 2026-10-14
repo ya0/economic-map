@@ -1,0 +1,13 @@
+iso3,cover_tol,reason
+USA,0.02,Census cartographic county boundaries vs Natural Earth coast and lakes
+CHN,0.02,Natural Earth admin-1 vs country outline
+IND,0.03,Natural Earth admin-1 vs country outline (Ladakh/Lakshadweep/disputed areas)
+KOR,0.02,Natural Earth admin-1 vs country outline
+THA,0.02,Natural Earth admin-1 vs country outline
+FIN,0.02,"GISCO coast vs Natural Earth (Aland, water)"
+BGR,0.02,GISCO coast vs Natural Earth
+HRV,0.03,GISCO coast vs Natural Earth
+VNM,0.04,Natural Earth admin-1 vs country outline
+RUS,0.03,Crimea and Sevastopol are not in OECD regional data
+DNK,0.02,GISCO coast vs Natural Earth
+SVK,0.02,GISCO coast vs Natural Earth

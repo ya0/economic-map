@@ -1,0 +1,18 @@
+data/raw/
+data/interim/
+data/processed/
+web/public/*.pmtiles
+web/public/*.json
+web/public/smooth/
+node_modules/
+__pycache__/
+.pytest_cache/
+.venv/
+*.egg-info/
+*.log
+*.bak
+*.tmp
+
+# AI session files: local only
+CLAUDE.md
+ai/

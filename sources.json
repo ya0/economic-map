@@ -1,0 +1,452 @@
+[
+ {
+  "source_id": "wb_wdi",
+  "name": "World Bank WDI: GDP current US$ (NY.GDP.MKTP.CD), population (SP.POP.TOTL), land area (AG.LND.TOTL.K2)",
+  "publisher": "World Bank",
+  "licence": "CC BY 4.0",
+  "url": "https://api.worldbank.org/v2/",
+  "role": "gdp+pop+area-national",
+  "retrieved_on": "2026-10-05"
+ },
+ {
+  "source_id": "imf_weo",
+  "name": "IMF World Economic Outlook: NGDPD, LP",
+  "publisher": "IMF",
+  "licence": "IMF terms (reuse with attribution)",
+  "url": "https://api.imf.org/external/sdmx/2.1/data/WEO/",
+  "role": "gdp+pop-national (fallback)",
+  "retrieved_on": "2026-10-05"
+ },
+ {
+  "source_id": "eurostat_nuts3_gdp",
+  "name": "Eurostat nama_10r_3gdp (MIO_EUR)",
+  "publisher": "Eurostat",
+  "licence": "Eurostat free re-use",
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/nama_10r_3gdp",
+  "role": "gdp-regional",
+  "retrieved_on": "2026-10-05"
+ },
+ {
+  "source_id": "eurostat_nuts3_pop",
+  "name": "Eurostat demo_r_pjangrp3 (sex T, TOTAL)",
+  "publisher": "Eurostat",
+  "licence": "Eurostat free re-use",
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/demo_r_pjangrp3",
+  "role": "pop-regional",
+  "retrieved_on": "2026-10-05"
+ },
+ {
+  "source_id": "eurostat_nuts3_area",
+  "name": "Eurostat reg_area3 (landuse L0008 = land area)",
+  "publisher": "Eurostat",
+  "licence": "Eurostat free re-use",
+  "url": "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/reg_area3",
+  "role": "area-regional",
+  "retrieved_on": "2026-10-05"
+ },
+ {
+  "source_id": "oecd_regional",
+  "name": "OECD Regional Database via SDMX DF_GDP (GDP, POP at TL2/TL3) and territorial correspondence table",
+  "publisher": "OECD",
+  "licence": "OECD terms (CC BY 4.0, to confirm)",
+  "url": "https://sdmx.oecd.org/public/rest/data/OECD.CFE.EDS,DSD_REG_ECO@DF_GDP,/all",
+  "role": "gdp+pop-regional",
+  "retrieved_on": "2026-10-05"
+ },
+ {
+  "source_id": "dose",
+  "name": "DOSE v2.14 (Wenz et al.), Zenodo 20035157",
+  "publisher": "PIK / Wenz et al.",
+  "licence": "CC BY 4.0",
+  "url": "https://zenodo.org/records/20035157",
+  "role": "gdp+pop-regional",
+  "retrieved_on": "2026-10-05"
+ },
+ {
+  "source_id": "us_bea_cagdp",
+  "name": "BEA CAGDP1 line 3: county GDP, current dollars",
+  "publisher": "BEA",
+  "licence": "public domain",
+  "url": "https://apps.bea.gov/regional/zip/CAGDP1.zip",
+  "role": "gdp-regional",
+  "retrieved_on": "2026-10-05"
+ },
+ {
+  "source_id": "us_census_popest",
+  "name": "Census county population estimates co-est2025-alldata",
+  "publisher": "US Census Bureau",
+  "licence": "public domain",
+  "url": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/counties/totals/co-est2025-alldata.csv",
+  "role": "pop-regional",
+  "retrieved_on": "2026-10-05"
+ },
+ {
+  "source_id": "us_census_gazetteer",
+  "name": "Census Gazetteer 2021 counties (ALAND)",
+  "publisher": "US Census Bureau",
+  "licence": "public domain",
+  "url": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2021_Gazetteer/2021_Gaz_counties_national.zip",
+  "role": "area-regional",
+  "retrieved_on": "2026-10-05"
+ },
+ {
+  "source_id": "us_census_cb",
+  "name": "Census cartographic boundary cb_2021_us_county_500k",
+  "publisher": "US Census Bureau",
+  "licence": "public domain",
+  "url": "https://www2.census.gov/geo/tiger/GENZ2021/shp/cb_2021_us_county_500k.zip",
+  "role": "boundary",
+  "retrieved_on": "2026-10-05"
+ },
+ {
+  "source_id": "gisco_nuts",
+  "name": "GISCO NUTS 2024 1:1M level 3 (GeoJSON)",
+  "publisher": "Eurostat GISCO",
+  "licence": "Eurostat re-use; EuroGeographics attribution",
+  "url": "https://gisco-services.ec.europa.eu/distribution/v2/nuts/geojson/NUTS_RG_01M_2024_4326_LEVL_3.geojson",
+  "role": "boundary",
+  "retrieved_on": "2026-10-05"
+ },
+ {
+  "source_id": "ons_itl3",
+  "name": "ONS ITL3 Jan 2025 boundaries, ultra-generalised (BUC)",
+  "publisher": "Office for National Statistics",
+  "licence": "OGL v3",
+  "url": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/ITL3_JAN_2025_UK_BUC_V2/FeatureServer/2",
+  "role": "boundary",
+  "retrieved_on": "2026-10-05"
+ },
+ {
+  "source_id": "natural_earth",
+  "name": "Natural Earth 10m admin-0 countries and admin-1",
+  "publisher": "Natural Earth",
+  "licence": "public domain",
+  "url": "https://github.com/nvkelso/natural-earth-vector",
+  "role": "boundary",
+  "retrieved_on": "2026-10-05"
+ },
+ {
+  "source_id": "us_bea_deflator",
+  "name": "US GDP implicit price deflator A191RD3A086NBEA (annual, 2017=100)",
+  "publisher": "BEA via FRED",
+  "licence": "public domain",
+  "url": "https://fred.stlouisfed.org/series/A191RD3A086NBEA",
+  "role": "deflator",
+  "retrieved_on": "2026-10-05"
+ },
+ {
+  "source_id": "wikidata",
+  "name": "Wikidata: population P1082 of admin-1 units by ISO 3166-2 (P300)",
+  "publisher": "Wikidata community",
+  "licence": "CC0",
+  "url": "https://query.wikidata.org/sparql",
+  "role": "pop-regional (fallback)",
+  "retrieved_on": "2026-10-12"
+ },
+ {
+  "source_id": "my_dosm_gdp_state",
+  "name": "DOSM GDP by state, supply side, 2015 constant prices (gdp_state_real_supply.csv)",
+  "publisher": "Department of Statistics Malaysia",
+  "licence": "CC BY 4.0",
+  "url": "https://storage.dosm.gov.my/gdp/gdp_state_real_supply.csv",
+  "role": "gdp-regional",
+  "retrieved_on": "2026-10-05"
+ },
+ {
+  "source_id": "br_ibge_pib_municipios",
+  "name": "IBGE PIB dos Munic\u00edpios: GDP at current prices by municipality (SIDRA table 5938, variable 37)",
+  "publisher": "IBGE",
+  "licence": "free use with attribution (IBGE)",
+  "url": "https://apisidra.ibge.gov.br/values/t/5938/n6/all/v/37/p/last%201",
+  "role": "gdp-regional",
+  "retrieved_on": "2026-10-06"
+ },
+ {
+  "source_id": "br_ibge_popest",
+  "name": "IBGE population estimates by municipality (SIDRA table 6579, variable 9324)",
+  "publisher": "IBGE",
+  "licence": "free use with attribution (IBGE)",
+  "url": "https://apisidra.ibge.gov.br/values/t/6579/n6/all/v/9324/p/2024",
+  "role": "pop-regional",
+  "retrieved_on": "2026-10-06"
+ },
+ {
+  "source_id": "br_ibge_area",
+  "name": "IBGE territorial area by municipality, 2022 census (SIDRA table 4714, variable 6318)",
+  "publisher": "IBGE",
+  "licence": "free use with attribution (IBGE)",
+  "url": "https://apisidra.ibge.gov.br/values/t/4714/n6/all/v/6318/p/2022",
+  "role": "area-regional",
+  "retrieved_on": "2026-10-06"
+ },
+ {
+  "source_id": "br_ibge_malha",
+  "name": "IBGE municipal mesh, generalised (API malhas v3, qualidade minima)",
+  "publisher": "IBGE",
+  "licence": "free use with attribution (IBGE)",
+  "url": "https://servicodados.ibge.gov.br/api/v3/malhas/paises/BR?intrarregiao=municipio&qualidade=minima",
+  "role": "boundary",
+  "retrieved_on": "2026-10-06"
+ },
+ {
+  "source_id": "mx_inegi_ce",
+  "name": "INEGI Censos Econ\u00f3micos 2024, definitive results: gross census value added (A131A) by municipio, one open-data file per state",
+  "publisher": "INEGI",
+  "licence": "INEGI terms of free use (attribution)",
+  "url": "https://www.inegi.org.mx/programas/ce/2024/",
+  "role": "gdp-regional (shares)",
+  "retrieved_on": "2026-10-06"
+ },
+ {
+  "source_id": "mx_inegi_mg",
+  "name": "INEGI Marco Geoestad\u00edstico (December 2025), municipal areas from the catalogue service wscatgeo",
+  "publisher": "INEGI",
+  "licence": "INEGI terms of free use (attribution)",
+  "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/",
+  "role": "boundary",
+  "retrieved_on": "2026-10-06"
+ },
+ {
+  "source_id": "mx_inegi_censo",
+  "name": "INEGI Censo de Poblaci\u00f3n y Vivienda 2020: total population by municipio (as served by wscatgeo)",
+  "publisher": "INEGI",
+  "licence": "INEGI terms of free use (attribution)",
+  "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/",
+  "role": "pop-regional",
+  "retrieved_on": ""
+ },
+ {
+  "source_id": "ocha_cod_chn",
+  "name": "China subnational administrative boundaries (COD-AB 2020), admin level 2",
+  "publisher": "OCHA (vetted by ITOS)",
+  "licence": "CC BY-IGO",
+  "url": "https://data.humdata.org/dataset/cod-ab-chn",
+  "role": "boundary",
+  "retrieved_on": "2026-10-06"
+ },
+ {
+  "source_id": "ca_statcan_cma_gdp",
+  "name": "Statistics Canada table 36-10-0468-01: GDP at basic prices by census metropolitan area, with a non-CMA row per province",
+  "publisher": "Statistics Canada",
+  "licence": "Statistics Canada Open Licence",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3610046801",
+  "role": "gdp-regional",
+  "retrieved_on": "2026-10-06"
+ },
+ {
+  "source_id": "ca_statcan_pop",
+  "name": "Statistics Canada population estimates, 1 July: by census metropolitan area (table 17-10-0148-01) and by province (17-10-0009-01)",
+  "publisher": "Statistics Canada",
+  "licence": "Statistics Canada Open Licence",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710014801",
+  "role": "pop-regional",
+  "retrieved_on": "2026-10-06"
+ },
+ {
+  "source_id": "ca_statcan_cma",
+  "name": "Statistics Canada 2021 Census cartographic boundary file, census metropolitan areas (ArcGIS service, generalised to 0.001 degrees)",
+  "publisher": "Statistics Canada",
+  "licence": "Statistics Canada Open Licence",
+  "url": "https://geo.statcan.gc.ca/geo_wa/rest/services/2021/Cartographic_boundary_files/MapServer/6",
+  "role": "boundary",
+  "retrieved_on": "2026-10-06"
+ },
+ {
+  "source_id": "br_ibge_localidades",
+  "name": "IBGE localities service: municipality to immediate geographic region (510 regions)",
+  "publisher": "IBGE",
+  "licence": "free use with attribution (IBGE)",
+  "url": "https://servicodados.ibge.gov.br/api/v1/localidades/municipios",
+  "role": "grouping",
+  "retrieved_on": "2026-10-06"
+ },
+ {
+  "source_id": "mx_conapo_metropolis",
+  "name": "Las metr\u00f3polis de M\u00e9xico 2020 (SEDATU, CONAPO, INEGI): municipalities of the 92 metropolises, open-data CSV municipios_poblacion.csv",
+  "publisher": "CONAPO",
+  "licence": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+  "url": "https://www.datos.gob.mx/dataset/metropolis_mexico_2020",
+  "role": "grouping",
+  "retrieved_on": "2026-10-06"
+ },
+ {
+  "source_id": "pbs_census2023",
+  "name": "7th Population and Housing Census 2023, Table 1: population by province and region",
+  "publisher": "Pakistan Bureau of Statistics",
+  "licence": "Official statistics (reuse with attribution)",
+  "url": "https://www.pbs.gov.pk/result-excel/",
+  "role": "pop-regional",
+  "retrieved_on": "2026-10-11"
+ },
+ {
+  "source_id": "ajk_bos_glance",
+  "name": "Azad Jammu & Kashmir at a Glance 2025 (Census 2023 table)",
+  "publisher": "AJ&K Bureau of Statistics, Planning & Development Department",
+  "licence": "Official statistics (reuse with attribution)",
+  "url": "https://pndajk.gov.pk/uploadfiles/downloads/AJK%20At%20a%20Glance%202025.pdf",
+  "role": "pop-regional",
+  "retrieved_on": "2026-10-11"
+ },
+ {
+  "source_id": "gb_pnd_glance",
+  "name": "Gilgit Baltistan at a Glance 2024, read through Wikipedia (Gilgit-Baltistan, revision 1374417251)",
+  "publisher": "Planning & Development Department, Government of Gilgit-Baltistan (via Wikipedia)",
+  "licence": "CC BY-SA 4.0 (Wikipedia)",
+  "url": "https://en.wikipedia.org/w/index.php?title=Gilgit-Baltistan&oldid=1374417251",
+  "role": "pop-regional (secondary)",
+  "retrieved_on": ""
+ },
+ {
+  "source_id": "in_ncp_projection",
+  "name": "Population Projections for India and States 2011-2036, Table 8 (1 March, thousands)",
+  "publisher": "National Commission on Population, Ministry of Health and Family Welfare",
+  "licence": "Government of India publication (reuse with attribution)",
+  "url": "https://files.givewell.org//files/DWDA%202009/Interventions/KMC/India-gov_MoH-Population-Projections_2011-2036.pdf",
+  "role": "pop-regional",
+  "retrieved_on": "2026-10-11"
+ },
+ {
+  "source_id": "citypopulation",
+  "name": "City Population: census tables by administrative division (Egypt, Philippines, Albania, Iran, Ukraine, Iraq, Papua New Guinea)",
+  "publisher": "Thomas Brinkhoff, citypopulation.de",
+  "licence": "Free use with attribution (publisher terms, not a stated open licence)",
+  "url": "https://www.citypopulation.de/",
+  "role": "pop-regional (secondary)",
+  "retrieved_on": "2026-10-12"
+ },
+ {
+  "source_id": "zhwiki_census",
+  "name": "2020 census population of the Chinese prefectures: Chinese Wikipedia city ranking and the 25 provincial lists (7th census bulletins and county-level compendium)",
+  "publisher": "Chinese Wikipedia contributors (data: NBS, provincial statistics bureaus)",
+  "licence": "CC BY-SA 4.0 (underlying official statistics)",
+  "url": "https://zh.wikipedia.org/wiki/\u4e2d\u83ef\u4eba\u6c11\u5171\u548c\u570b\u57ce\u5e02\u4eba\u53e3\u6392\u540d",
+  "role": "pop-regional (secondary)",
+  "retrieved_on": "2026-10-12"
+ },
+ {
+  "source_id": "ocha_cod_ps",
+  "name": "OCHA Common Operational Datasets, Subnational Population Statistics (admin-1, total population): NSO projections republished by UNFPA/OCHA (Niger INS 2024, Sudan CBS 2024, Mongolia NSO 2021, Ethiopia CSA 2022, Kenya KNBS 2019, Mali DNP 2018, Chad INSEED 2023)",
+  "publisher": "OCHA / UNFPA (HDX)",
+  "licence": "CC BY-IGO / CC BY",
+  "url": "https://data.humdata.org/dataset/cod-ps-global",
+  "role": "pop-regional (secondary)",
+  "retrieved_on": "2026-10-12"
+ },
+ {
+  "source_id": "ine_ve",
+  "name": "INE Venezuela: Proyeccion de la poblacion al 30 de junio, segun entidad federal, 2000-2050 (census 2011 base)",
+  "publisher": "Instituto Nacional de Estadistica (Venezuela)",
+  "licence": "Official statistics (CC0 on HDX)",
+  "url": "http://www.ine.gob.ve/documentos/Demografia/SituacionDinamica/Proyecciones/xls/Entidad_Federal.xls",
+  "role": "pop-regional",
+  "retrieved_on": "2026-10-12"
+ },
+ {
+  "source_id": "ons_dz",
+  "name": "ONS Algeria: Annuaire statistique de l'Algerie n. 31, Chapitre III Demographie, Table 4 (census 2008, resident population by wilaya)",
+  "publisher": "Office National des Statistiques (Algeria)",
+  "licence": "Official statistics (no stated licence; republished figures)",
+  "url": "https://www.ons.dz/IMG/pdf/demographie.pdf",
+  "role": "pop-regional",
+  "retrieved_on": ""
+ },
+ {
+  "source_id": "ine_ao",
+  "name": "INE Angola: Recenseamento Geral da Populacao e Habitacao 2024, final results by province, via the English Wikipedia table (rev 1344407276)",
+  "publisher": "Instituto Nacional de Estatistica (Angola) via Wikipedia",
+  "licence": "Official statistics; Wikipedia CC BY-SA 4.0",
+  "url": "https://en.wikipedia.org/wiki/Provinces_of_Angola",
+  "role": "pop-regional (secondary)",
+  "retrieved_on": ""
+ },
+ {
+  "source_id": "ukrstat_grp",
+  "name": "Gross regional product by region, current prices, UAH million, 2005-2021 (Ukrstat dataset 14 on data.gov.ua; includes Kyiv city, Donetsk and Luhansk; Crimea and Sevastopol have no values; regions sum to the national total 5,450,849 in 2021)",
+  "publisher": "State Statistics Service of Ukraine (via data.gov.ua)",
+  "licence": "Creative Commons Attribution (data.gov.ua)",
+  "url": "https://data.gov.ua/dataset/6e24b7d1-218f-4899-b187-19de3ad1ded6",
+  "role": "gdp-regional",
+  "retrieved_on": "2026-10-12"
+ },
+ {
+  "source_id": "gastat_sa",
+  "name": "GASTAT Saudi Arabia: Population and Housing Census 2022, resident population by region, via the English Wikipedia table (rev 1372326679)",
+  "publisher": "General Authority for Statistics (Saudi Arabia) via Wikipedia",
+  "licence": "Official statistics; Wikipedia CC BY-SA 4.0",
+  "url": "https://en.wikipedia.org/wiki/Regions_of_Saudi_Arabia",
+  "role": "pop-regional (secondary)",
+  "retrieved_on": ""
+ },
+ {
+  "source_id": "ruwiki_grp",
+  "name": "Gross regional product 2023 by federal subject, billion RUB current prices: Russian Wikipedia 'Spisok subyektov Rossiyskoy Federatsii po valovomu produktu' (revision 154639371; 85 subjects, the 83 outside the disputed Crimea and Sevastopol are used; names from en.wikipedia 'List of Russian federal subjects by GRDP', revision 1370014658)",
+  "publisher": "Rosstat (via Russian Wikipedia)",
+  "licence": "CC BY-SA 4.0 (Wikipedia); Rosstat data",
+  "url": "https://ru.wikipedia.org/w/index.php?oldid=154639371",
+  "role": "gdp-regional (secondary)",
+  "retrieved_on": "2026-10-12"
+ },
+ {
+  "source_id": "kazwiki_grp",
+  "name": "Gross regional product 2024 by region, billion KZT current prices: en.wikipedia 'List of regions of Kazakhstan by GDP' (revision 1351637844) citing the Bureau of National Statistics (Agency for Strategic planning and reforms), 20 units summed to the 16 Natural Earth units",
+  "publisher": "Bureau of National Statistics, Kazakhstan (via Wikipedia)",
+  "licence": "CC BY-SA 4.0 (Wikipedia); official statistics",
+  "url": "https://en.wikipedia.org/w/index.php?title=List_of_regions_of_Kazakhstan_by_GDP&oldid=1351637844",
+  "role": "gdp-regional (secondary)",
+  "retrieved_on": "2026-10-12"
+ },
+ {
+  "source_id": "wikipedia:List of Nigerian states by GDP",
+  "name": "Wikipedia: List of Nigerian states by GDP (revision 1371820261)",
+  "publisher": "Wikipedia",
+  "licence": "CC BY-SA 4.0",
+  "role": "gdp-regional (secondary)",
+  "cited_origin": "BudgIT state GDP estimates (private think tank; modelled)",
+  "url": "https://en.wikipedia.org/w/index.php?title=List_of_Nigerian_states_by_GDP&oldid=1371820261"
+ },
+ {
+  "source_id": "wikipedia:List of Pakistani provinces by GDP",
+  "name": "Wikipedia: List of Pakistani provinces by GDP (revision 1378459640)",
+  "publisher": "Wikipedia",
+  "licence": "CC BY-SA 4.0",
+  "role": "gdp-regional (secondary)",
+  "cited_origin": "economist estimates cited on the page (no official provincial accounts)",
+  "url": "https://en.wikipedia.org/w/index.php?title=List_of_Pakistani_provinces_by_GDP&oldid=1378459640"
+ },
+ {
+  "source_id": "wikipedia:List of Indian states and union territories by GDP",
+  "name": "Wikipedia: List of Indian states and union territories by GDP (revision 1373737092)",
+  "publisher": "Wikipedia",
+  "licence": "CC BY-SA 4.0",
+  "role": "gdp-regional (secondary)",
+  "cited_origin": "MoSPI and state directorates GSDP at current prices FY2022-23 (fiscal year mapped to its starting year)",
+  "url": "https://en.wikipedia.org/w/index.php?title=List_of_Indian_states_and_union_territories_by_GDP&oldid=1373737092"
+ },
+ {
+  "source_id": "wikipedia:List of South African provinces by GDP",
+  "name": "Wikipedia: List of South African provinces by GDP (revision 1374263831)",
+  "publisher": "Wikipedia",
+  "licence": "CC BY-SA 4.0",
+  "role": "gdp-regional (secondary)",
+  "cited_origin": "Stats SA provincial GDP 2023",
+  "url": "https://en.wikipedia.org/w/index.php?title=List_of_South_African_provinces_by_GDP&oldid=1374263831"
+ },
+ {
+  "source_id": "wikipedia:List of regions of the Philippines by GDP",
+  "name": "Wikipedia: List of regions of the Philippines by GDP (revision 1374263852)",
+  "publisher": "Wikipedia",
+  "licence": "CC BY-SA 4.0",
+  "role": "gdp-regional (secondary)",
+  "cited_origin": "Philippine Statistics Authority regional accounts 2024 (current prices; page lists 18 regions plus a total row)",
+  "url": "https://en.wikipedia.org/w/index.php?title=List_of_regions_of_the_Philippines_by_GDP&oldid=1374263852"
+ },
+ {
+  "source_id": "wikipedia:List of prefecture-level divisions of China by GDP",
+  "name": "Wikipedia: List of prefecture-level divisions of China by GDP (revision 1370039454)",
+  "publisher": "Wikipedia",
+  "licence": "CC BY-SA 4.0",
+  "role": "gdp-regional (secondary)",
+  "cited_origin": "statistical yearbooks 2022 and 2023 of the provincial statistics bureaus",
+  "url": "https://en.wikipedia.org/w/index.php?title=List_of_prefecture-level_divisions_of_China_by_GDP&oldid=1370039454"
+ }
+]

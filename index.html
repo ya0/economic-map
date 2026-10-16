@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Economic map</title>
+  <meta name="description" content="Where the world's economic output is made: GDP per km² for countries and about 6,500 regions, from official statistics.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Crect width='8' height='8' fill='%230b0e13'/%3E%3Crect x='1' y='5' width='2' height='2' fill='%23fcfdbf'/%3E%3Crect x='4' y='2' width='2' height='5' fill='%23fb8761'/%3E%3C/svg%3E">
+  <link rel="preload" href="indicators.json" as="fetch" crossorigin>
+  <script type="module" crossorigin src="./assets/index-Dg58dhEs.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-5CeMb8Yd.css">
+</head>
+<body>
+  <div id="map"></div>
+  <div id="frame" hidden><span id="fro"></span></div>
+  <div id="fbar" hidden><select id="fasp" aria-label="Aspect ratio"><option value="">Free</option><option value="1">1:1</option><option value="1.3333">4:3</option><option value="1.7778">16:9</option><option value="v">View</option></select><button type="button" id="fok">Apply</button><button type="button" id="fcancel">Cancel</button></div>
+  <div id="toast" role="status" hidden></div>
+  <button id="compass" type="button" title="Reset north" aria-label="Reset north" hidden><svg viewBox="0 0 36 36" width="36" height="36" aria-hidden="true"></svg></button>
+  <canvas id="smc" hidden></canvas>
+  <canvas id="smv" hidden></canvas>
+  <div id="left"><!-- the round buttons and the Map card are fixed top right; they sit here for their place in the tab order -->
+    <header class="card" id="head">
+      <div class="fh"><button class="chev" type="button"></button><h1>Economic map</h1></div>
+      <label class="show">Show <select id="ind" aria-label="Indicator"></select></label>
+      <div class="switch" role="radiogroup" aria-label="View">
+        <label><input type="radio" name="mode" id="mode-r"> Regions</label>
+        <label><input type="radio" name="mode" id="smooth"> Smoothed</label>
+      </div>
+      <details id="smopts" class="sec" hidden>
+        <summary>Smoothing options</summary>
+        <div class="pair">
+          <label>Kernel <select id="sk" aria-label="Smoothing kernel"></select></label>
+          <label>Radius <select id="sr" aria-label="Smoothing radius"></select></label>
+          <label class="chk" title="Values are divided by all area within reach, sea included, and drawn over the water."><input type="checkbox" id="ss"> Include sea</label>
+          <label class="chk"><input type="checkbox" id="lx"> Local excess</label>
+          <label>Colours <select id="cls2" aria-label="Colour classes"></select></label>
+          <label>Palette <select id="pal2" aria-label="Palette"></select></label>
+        </div>
+      </details>
+      <p id="cover"></p>
+    </header>
+    <div id="fab"><!-- round on a phone, in the Map card's header row on a desktop -->
+      <button id="area" type="button"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M3 8V3h5M16 3h5v5M21 16v5h-5M8 21H3v-5" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Focus area</span></button>
+      <button id="ui-btn" type="button" title="Hide panels" aria-label="Hide panels"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path class="slash" d="M3 21L21 3" stroke="currentColor" stroke-width="2"/></svg><span>Hide panels</span></button>
+    </div>
+    <div id="dock">
+      <div class="card" id="tools">
+        <div class="fh"><button class="chev" type="button"></button><h2>Map</h2></div>
+        <div class="search">
+          <input id="q" type="search" placeholder="Find a region or country" autocomplete="off" spellcheck="false"
+            role="combobox" aria-expanded="false" aria-controls="results" aria-autocomplete="list" aria-label="Find a region or country">
+          <ul id="results" role="listbox" aria-label="Matches" hidden></ul>
+        </div>
+        <div id="focus" class="fr" hidden><span id="chips"></span><button type="button" id="overseas" hidden>Show overseas</button><button type="button" id="unfocus">Clear focus</button></div>
+        <div class="row">
+          <label><input type="checkbox" id="globe"> Globe</label>
+          <label><input type="checkbox" id="relief"> Relief</label>
+          <label><input type="checkbox" id="borders" checked> Borders</label>
+          <button id="export-btn" type="button">Export image</button>
+        </div>
+      </div>
+      <section class="card" id="legend" aria-label="Legend and settings">
+        <div class="fh"><button class="chev" type="button"></button><h2>Legend</h2><div id="strip"></div></div>
+        <div id="lg"></div>
+        <div id="seg" role="group" aria-label="Colour scale"></div>
+        <div id="acc">
+          <details id="sc"><summary>Scale and colours<small></small></summary>
+            <div class="rng"><label>Min <input id="cmin" inputmode="decimal" aria-label="Lowest colour value"></label><label>Max <input id="cmax" inputmode="decimal" aria-label="Highest colour value"></label><button type="button" id="cauto">Auto</button></div>
+            <div class="pair">
+              <label>Palette <select id="pal" aria-label="Palette"></select></label>
+              <label>Colours <select id="cls" aria-label="Colour classes"></select></label>
+              <label id="brklbl">Classes <select id="brk" aria-label="Class breaks"></select></label>
+            </div>
+          </details>
+          <details id="sd"><summary>Data<small></small></summary>
+            <div class="pair">
+              <label>Level <select id="level" aria-label="Level of detail"></select></label>
+              <label id="baselbl">Prices <select id="base" aria-label="Price basis"></select></label>
+              <label class="chk" title="Estimates and regions derived by splitting a national total by population. Off: a derived region shows its whole country."><input type="checkbox" id="est" checked> Estimates</label>
+            </div>
+          </details>
+          <details id="sa"><summary>Appearance<small></small></summary>
+            <div class="pair">
+              <label>Theme <select id="theme" aria-label="Theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
+              <button id="credits-btn" type="button">Data sources and credits</button>
+            </div>
+          </details>
+        </div>
+      </section>
+    </div>
+  </div>
+  <aside class="card" id="panel" hidden></aside>
+  <div class="card" id="tip" hidden></div>
+  <button id="credits-link" type="button" hidden>Data sources and credits</button>
+  <dialog id="credits"></dialog>
+  <dialog id="export">
+    <form method="dialog"><button class="x" aria-label="Close">×</button></form><h2>Export image</h2>
+    <label>Size <select id="export-q" aria-label="Export size"><option value="">Standard (Full HD or more)</option><option value="max">Maximum (this device's limit)</option></select></label>
+    <p id="export-note">Rendering…</p><img id="export-img" alt="Preview of the exported image" hidden>
+    <div class="acts"><button type="button" id="export-dl" disabled>Download PNG</button><button type="button" id="export-cancel">Cancel</button></div>
+  </dialog>
+</body>
+</html>

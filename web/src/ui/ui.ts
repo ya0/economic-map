@@ -138,7 +138,7 @@ const saved = (): Record<string, boolean> => { try { return JSON.parse(localStor
 const remember = (id: string, open: boolean) => { try { localStorage.setItem("fold", JSON.stringify({ ...saved(), [id]: open })); } catch { /* private window */ } };
 
 /** Card with a header row `.fh` (chevron `.chev` first): everything after the header goes into a body that the chevron shows or hides.
- * Safe to call again after the card's content was replaced. Cards start open on a desktop, folded on a phone. */
+ * Safe to call again after the card's content was replaced. Cards start open on a desktop; on a phone only the header card (the map's title and indicator) does. */
 export function foldCard(card: HTMLElement) {
   const head = card.querySelector<HTMLElement>(":scope > .fh")!, chev = head.querySelector<HTMLButtonElement>(".chev")!;
   let body = card.querySelector<HTMLElement>(":scope > .fb");
@@ -157,7 +157,7 @@ export function foldCard(card: HTMLElement) {
     chev.setAttribute("aria-expanded", String(open));
   };
   chev.onclick = () => { const open = card.classList.contains("folded"); set(open); remember(card.id, open); };
-  set(saved()[card.id] ?? !matchMedia("(max-width: 640px)").matches);
+  set(saved()[card.id] ?? (card.id === "head" || !matchMedia("(max-width: 640px)").matches));
 }
 
 /** Accordion over the `details` children of `root`: one section is open at a time, the open one is kept in localStorage; an opening

@@ -8,6 +8,12 @@ const box = (page: Page, sel: string) => page.locator(sel).evaluate((e) => { con
 for (const d of DEVICES) test.describe(d.name, () => {
   test.use(d.use);
 
+  test("a phone starts with the header card open and the others folded; a desktop with all open", async ({ page }) => {
+    await page.goto("/#c=5/50/10");
+    await page.waitForFunction(() => (window as any).__map?.loaded());
+    for (const id of CARDS) await expect(page.locator(`#${id} .chev`)).toHaveAttribute("aria-expanded", String(!d.phone || id === "head"));
+  });
+
   test("round buttons stay reachable, cards never overlap or leave the screen, whatever is folded", async ({ page }) => {
     await page.goto("/#c=5/50/10&f=ISO3:KAZ");
     await page.waitForFunction(() => (window as any).__map?.loaded());
@@ -36,6 +42,7 @@ for (const d of DEVICES) test.describe(d.name, () => {
     await sec(page, "sd");
     await page.evaluate(() => ((document.getElementById("smopts") as HTMLDetailsElement).open = true));
     const { width: w, height: h } = page.viewportSize()!;
+    if (d.phone) await page.click("#head .chev"); // the title card starts open on a phone; with its options open as well, the sticky dock may cover its lower part: that is the scrolling column working, so fold it for this check
     for (const id of CARDS) { // the left column scrolls on a short screen: every card can be brought on screen, and is no taller than it
       await page.locator("#" + id).scrollIntoViewIfNeeded();
       const a = await box(page, "#" + id);
